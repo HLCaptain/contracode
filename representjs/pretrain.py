@@ -69,7 +69,7 @@ def pretrain(
     logger.add(str((run_dir / "train.log").resolve()))
     logger.info(f"Saving logs, model checkpoints to {run_dir}")
     wandb.init(
-        name=run_name, config=config, job_type="training", project="moco-pretrain", entity="ml4code",
+        name=run_name, config=config, job_type="training", project="moco-pretrain", entity="illyan",
     )
 
     sp = spm.SentencePieceProcessor()

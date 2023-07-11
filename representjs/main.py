@@ -207,7 +207,7 @@ def test(
     top_p_threshold=0.9,
     top_p_temperature=1.0,
 ):
-    wandb.init(name=checkpoint_file, config=locals(), project="f1_eval", entity="ml4code")
+    wandb.init(name=checkpoint_file, config=locals(), project="f1_eval", entity="illyan")
     if use_cuda:
         assert torch.cuda.is_available(), "CUDA not available. Check env configuration, or pass --use_cuda False"
     sp = spm.SentencePieceProcessor()
@@ -338,7 +338,7 @@ def train(
     logger.info(f"Saving logs, model checkpoints to {run_dir}")
     config = locals()
     logger.info(f"Config: {config}")
-    wandb.init(name=run_name, config=config, job_type="training", project="identifier-prediction", entity="ml4code")
+    wandb.init(name=run_name, config=config, job_type="training", project="identifier-prediction", entity="illyan")
 
     if use_cuda:
         assert torch.cuda.is_available(), "CUDA not available. Check env configuration, or pass --use_cuda False"

@@ -236,7 +236,7 @@ def pretrain(
             project = "moco-pretrain"
         elif config["loss_mode"] == "hybrid":
             project = "hybrid"
-        wandb.init(name=config["run_name"], config=config, job_type="training", project=project, entity="ml4code")
+        wandb.init(name=config["run_name"], config=config, job_type="training", project=project, entity="illyan")
 
     logger.info("Use GPU: {} for training".format(gpu))
     torch.cuda.set_device(gpu)

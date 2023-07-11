@@ -168,7 +168,7 @@ def train(
     logger.info(f"Saving logs, model checkpoints to {run_dir}")
     config = locals()
     logger.info(f"Config: {config}")
-    wandb.init(name=run_name, config=config, job_type="training", project="type_prediction", entity="ml4code")
+    wandb.init(name=run_name, config=config, job_type="training", project="type_prediction", entity="illyan")
 
     if use_cuda:
         assert torch.cuda.is_available(), "CUDA not available. Check env configuration, or pass --use_cuda False"
